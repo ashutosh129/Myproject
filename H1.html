@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logical Operator and Function Example</title>
+</head>
+<body>
+	<h1>Logical Operator and Function Example</h1>
+
+	<form>
+		<label for="input1">Input 1:</label>
+		<input type="text" id="input1">
+
+		<label for="input2">Input 2:</label>
+		<input type="text" id="input2">
+
+		<button type="button" onclick="calculate()">Calculate</button>
+	</form>
+
+	<p id="result"></p>
+
+	<script>
+		function calculate() {
+			let input1 = parseInt(document.getElementById('input1').value);
+			let input2 = parseInt(document.getElementById('input2').value);
+
+			let result = logicalFunction(input1, input2);
+
+			document.getElementById('result').innerHTML = result;
+		}
+
+		function logicalFunction(input1, input2) {
+			if (input1 > 0 && input2 > 0) {
+				return "True";
+			} else if (input1 < 0 || input2 > 0) {
+				return "False";
+			} else {
+				return "False";
+			}
+		}
+	</script>
+</body>
+</html>
